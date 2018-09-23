@@ -4,7 +4,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
@@ -20,6 +20,30 @@
 
 .App-intro {
   font-size: large;
+}
+.menu 
+{
+  background-color:#81F7F3;
+ 
+  
+}
+.menu ul li
+{
+  list-style: none;
+  display: inline-block;
+  width: 10%;
+
+}
+.menu ul li:hover
+{
+  background-color: aqua;
+}
+.encabezado
+{
+  background-color: black;
+  color: antiquewhite;
+  padding-top: 30px;
+  
 }
 
 @keyframes App-logo-spin {
