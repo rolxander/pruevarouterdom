@@ -12,7 +12,8 @@ class App extends Component {
       console.log(children);
     return (
       <div className="App">
-        <Content body={children} />       
+        
+        {children}       
       </div>
     );
   }

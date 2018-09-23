@@ -8,6 +8,7 @@ import AppRoutes from './routes'
 import registerServiceWorker from './registerServiceWorker';
 
 render(
+
 <Router>
     <AppRoutes />   
 </Router>, document.getElementById('root'));
