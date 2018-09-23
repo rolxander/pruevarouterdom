@@ -6,10 +6,6 @@ import './index.css';
 //Routes
 import AppRoutes from './routes'
 import registerServiceWorker from './registerServiceWorker';
-
-render(
-
-<Router>
-    <AppRoutes />   
-</Router>, document.getElementById('root'));
+render(<Router><AppRoutes /></Router>, document.getElementById('root')
+);
 registerServiceWorker();
