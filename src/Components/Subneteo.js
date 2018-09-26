@@ -1,27 +1,37 @@
 //Import Paquetes
 import React ,{Component} from 'react';
+import Redes from './public/js/Redes';
 
 //Componente
-class Subneto extends Component{
-    tranformar(){
-        let oct1 = document.getElementById('oct1').value;
+class Subneteo extends Component{
+    Subnetear(){   
+        let oct1 = document.getElementById('oct1').value*1;
+        let oct2 = document.getElementById('oct2').value*1;
+        let oct3 = document.getElementById('oct3').value*1;
+        let oct4 = document.getElementById('oct4').value*1;
+        let BitsHost = document.getElementById('BitsHost').value*1;
         let resultado = document.getElementById("resultado");
-        resultado.innerHTML =oct1;
-        
-
+        let objetoR = new Redes();
+         oct1 = objetoR.convertirBinario(oct1);
+         oct2 = objetoR.convertirBinario(oct2);
+         oct3 = objetoR.convertirBinario(oct3);
+         oct4 = objetoR.convertirBinario(oct4);
+        let respuesta = `${oct1}.${oct2}.${oct3}.${oct4}/${BitsHost}`;
+        resultado.innerHTML =respuesta;
     }
     render(){
 
         return(<div>
-                    <h2>Subneto : Introduce la direccion ip</h2>
-                    <input type ="number" id="oct1"/>
-                    <input type ="number" id="oct2"/>
-                    <input type ="number" id="oct3"/>
-                    <input type ="number" id="oct4"/>
-                    <button onClick={this.tranformar}>Subetear</button>
+                    <h2>Subnetear Red: Introduce la direccion ip</h2>
+                    <input type ="number" id="oct1" min="0" max="255"/>
+                    <input type ="number" id="oct2" min="0" max="255"/>
+                    <input type ="number" id="oct3" min="0" max="255"/>
+                    <input type ="number" id="oct4" min="0" max="255"/>/
+                    <input type ="number" id="BitsHost" min="0" max="32"/>
+                    <button onClick={this.Subnetear}>Subnetear</button>
                     <div id="resultado"></div>
             </div>);
 
     }
 }
-export default Subneto;
+export default Subneteo;

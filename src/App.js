@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 // Assets
 import './App.css';
 //Componentes
-import Subneteo from './Components/Subneteo'
+import ConvertirBin from './Components/ConvertirBin';
+import Subneteo from './Components/Subneteo';
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Subneteo />
+        {/*<ConvertirBin />*/}
+        
       </div>
     );
   }
