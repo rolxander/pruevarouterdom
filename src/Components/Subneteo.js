@@ -11,13 +11,8 @@ class Subneteo extends Component{
         let oct4 = document.getElementById('oct4').value*1;
         let BitsHost = document.getElementById('BitsHost').value*1;
         let resultado = document.getElementById("resultado");
-        let objetoR = new Redes();
-         oct1 = objetoR.convertirBinario(oct1);
-         oct2 = objetoR.convertirBinario(oct2);
-         oct3 = objetoR.convertirBinario(oct3);
-         oct4 = objetoR.convertirBinario(oct4);
-        let respuesta = `${oct1}.${oct2}.${oct3}.${oct4}/${BitsHost}`;
-        resultado.innerHTML =respuesta;
+        let objetoR = new Redes(oct1,oct2,oct3,oct4,BitsHost);
+     
     }
     render(){
 
